@@ -1,0 +1,21 @@
+.header {
+  width: 60%;
+  background-color: #003865;
+  color: white;
+  text-align: center;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h1 {
+  margin-top: 15px;
+  font-size: 50px;
+  letter-spacing: 3px;
+}
+
+.input {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
