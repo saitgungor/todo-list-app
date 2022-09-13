@@ -5,10 +5,10 @@ const ListItem = (props) => {
     <li id={props.id} className={classes.listItem}>
       {props.task}
       <span className={classes.edit}>
-        <img src="/edit.png" />
+        <img src="/edit.png" alt="edit-icon" />
       </span>
       <span className={classes.delete}>
-        <img src="/close.png" />
+        <img src="/close.png" alt="delete-icon" />
       </span>
     </li>
   );
