@@ -1,0 +1,32 @@
+.listItem {
+  height: 35px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  padding-left: 30px;
+  background: #efede4;
+  font-size: 21px;
+  transition: 0.2s;
+  width: 100%;
+}
+
+.edit {
+  position: absolute;
+  right: 5%;
+}
+
+.delete {
+  position: absolute;
+  right: 1%;
+}
+
+.edit img {
+  height: 14px;
+  display: flex;
+}
+
+.delete img {
+  height: 20px;
+  display: flex;
+  align-items: flex-end;
+}

@@ -1,0 +1,45 @@
+.wrapper {
+  width: 60%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.wrapper ul li:nth-child(odd) {
+  background: #b7d3df;
+}
+
+.wrapper ul li:nth-child(odd):hover {
+  background: #99becd;
+}
+
+.wrapper ul li:hover {
+  background: #e2ddca;
+}
+
+.wrapper ul li.checked {
+  background: #1998c7;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+.wrapper ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.wrapper .close:hover {
+  background-color: #8a8b8d;
+  color: white;
+}
