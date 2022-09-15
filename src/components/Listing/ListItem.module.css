@@ -1,4 +1,5 @@
 .listItem {
+  position: relative;
   height: 35px;
   display: flex;
   cursor: pointer;
@@ -12,21 +13,79 @@
 
 .edit {
   position: absolute;
-  right: 5%;
+  right: 35px;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.delete {
+.close {
   position: absolute;
-  right: 1%;
+  right: 0;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .edit img {
   height: 14px;
-  display: flex;
 }
 
-.delete img {
+.close img {
   height: 20px;
-  display: flex;
-  align-items: flex-end;
+}
+
+.close:hover {
+  background-color: #8a8b8d;
+}
+
+.close img:hover {
+  height: 24px;
+}
+
+.edit:hover {
+  background-color: #22fcff;
+}
+
+.edit img:hover {
+  height: 16px;
+}
+
+li:nth-child(odd) {
+  background: #b7d3df;
+}
+
+li:nth-child(odd):hover {
+  background: #99becd;
+}
+
+li:hover {
+  background: #e2ddca;
+}
+
+li.checked {
+  background: #1998c7;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+li.checked:hover {
+  background: #43b4dd;
 }

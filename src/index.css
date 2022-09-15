@@ -8,3 +8,7 @@
   display: flex;
   justify-content: center;
 }
+
+body {
+  background-color: #a0a2a2;
+}

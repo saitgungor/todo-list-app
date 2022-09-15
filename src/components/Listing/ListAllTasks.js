@@ -1,18 +1,14 @@
 import ListItem from "./ListItem";
-import classes from "./ListAllTasks.module.css";
+import "./ListAllTasks.css";
+
+import { useSelector } from "react-redux";
 
 const ListAllTask = () => {
-  const dummyList = [
-    { task: "React öğren", id: 1 },
-    { task: "JavaScript öğren", id: 2 },
-    { task: "TypeScript öğren", id: 3 },
-    { task: "Günlük 1.5 lt su iç", id: 4 },
-    { task: "Yüzme öğren", id: 4 },
-  ];
+  const tasks = useSelector((state) => state.task.tasks);
 
-  const tasksList = dummyList.map((item) => (
+  const tasksList = tasks.map((item) => (
     <ListItem
-      task={item.task}
+      content={item.content}
       id={item.id}
       isDone={item.isDone}
       key={item.id}
@@ -20,7 +16,7 @@ const ListAllTask = () => {
   ));
 
   return (
-    <div className={classes.wrapper}>
+    <div className="wrapper">
       <ul>{tasksList}</ul>
     </div>
   );
