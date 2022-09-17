@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+input {
+  border-radius: 8px 0 0 8px;
+  font-size: 18px;
+  height: 2.5rem;
+  width: 70%;
+  border: none;
+  padding-left: 2rem;
+}
+
+.button {
+  background: #1998c7;
+  border-radius: 0 8px 8px 0;
+  color: white;
+  width: 6rem;
+  height: 2.5rem;
+  cursor: pointer;
+  font-size: 22px;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

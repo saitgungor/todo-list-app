@@ -1,12 +1,12 @@
 .header {
-  width: 60%;
+  width: 55%;
   background-color: #003865;
   color: white;
   text-align: center;
   height: 150px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  position: relative;
 }
 
 h1 {
@@ -18,4 +18,9 @@ h1 {
 .input {
   padding-left: 3rem;
   padding-right: 3rem;
+}
+.username {
+  position: absolute;
+  right: 3%;
+  top: 2%;
 }

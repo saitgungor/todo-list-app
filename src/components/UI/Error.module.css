@@ -1,0 +1,15 @@
+.wrapper {
+  width: 55%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  height: 75px;
+  border: solid;
+  border-color: #eb1d36;
+}
+
+p {
+  line-height: 2rem;
+}

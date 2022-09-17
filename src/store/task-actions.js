@@ -1,5 +1,4 @@
 import { taskActions } from "./task-slice";
-import { useSelector } from "react-redux";
 
 export const fetchTasksData = () => {
   return async (dispatch) => {
@@ -7,11 +6,9 @@ export const fetchTasksData = () => {
       const response = await fetch(
         "https://631737bccb0d40bc414f3cfe.mockapi.io/todos"
       );
-
       if (!response) {
         throw new Error("Could not fetch tasks data");
       }
-
       const data = await response.json();
       if (data && data.length > 0) {
         return data;

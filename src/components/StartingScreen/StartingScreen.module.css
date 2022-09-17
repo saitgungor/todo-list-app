@@ -1,0 +1,18 @@
+.wrapper {
+  height: 225px;
+  width: 55%;
+  background-color: rgb(35 24 71);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.wrapper h2 {
+  font-size: 26px;
+}
+
+.wrapper p {
+  font-size: 17px;
+}

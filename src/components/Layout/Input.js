@@ -1,18 +1,36 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import classes from "./Input.module.css";
 import { useDispatch } from "react-redux";
 import { addTask } from "../../store/task-actions";
+import { taskActions } from "../../store/task-slice";
+import { useSelector } from "react-redux";
 
 const Input = () => {
   const dispatch = useDispatch();
+
+  const tasks = useSelector((state) => state.task.tasks);
+
+  const inputRef = useRef();
+
   const [input, setInput] = useState("");
+
   const onChangeHandler = (event) => {
     setInput(event.target.value);
   };
 
   const onClickHandler = () => {
-    const content = { content: input };
+    inputRef.current.value = "";
+    if (input.trim().length < 3) {
+      dispatch(taskActions.showError(true));
+      return;
+    }
+    const content = {
+      content: input,
+      isDone: false,
+      id: `${+tasks[tasks.length - 1].id + 1}`,
+    };
     dispatch(addTask(content));
+    dispatch(taskActions.addTask(content));
   };
 
   return (
@@ -22,6 +40,7 @@ const Input = () => {
         id="task"
         placeholder="Add a New Task"
         onChange={onChangeHandler}
+        ref={inputRef}
       />
       <span className={classes.button} onClick={onClickHandler}>
         Add

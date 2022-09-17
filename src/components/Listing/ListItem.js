@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import classes from "./ListItem.module.css";
 import { taskActions } from "../../store/task-slice";
 import { deleteTask, updateTaskData } from "../../store/task-actions";
+import EditListItem from "./EditListItem";
 
 const ListItem = (props) => {
   const tasks = useSelector((state) => state.task.tasks);
@@ -30,10 +31,8 @@ const ListItem = (props) => {
       className={`${classes.listItem} ${props.isDone && classes.checked}`}
       onClick={onClickHandler}
     >
-      {props.content}
-      <span className={classes.edit}>
-        <img src="/edit.png" alt="edit-icon" />
-      </span>
+      <EditListItem content={props.content} />
+
       <span className={classes.close} onClick={onDeleteHandler}>
         <img src="/close.png" alt="delete-icon" />
       </span>
