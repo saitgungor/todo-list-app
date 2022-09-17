@@ -27,7 +27,7 @@ const Input = () => {
     const content = {
       content: input,
       isDone: false,
-      id: `${+tasks[tasks.length - 1].id + 1}`,
+      id: `${tasks.length > 0 ? +tasks[tasks.length - 1].id + 1 : 1}`,
     };
     dispatch(addTask(content));
     dispatch(taskActions.addTask(content));

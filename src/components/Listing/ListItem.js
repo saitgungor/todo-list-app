@@ -11,12 +11,19 @@ const ListItem = (props) => {
   const dispatch = useDispatch();
 
   const onClickHandler = (event) => {
-    const id = event.target.id;
-    if (!!(event.target.value ?? true)) return;
-    dispatch(taskActions.toggleTask(id));
-    const [target] = tasks.filter((task) => task.id === id);
-    const content = { isDone: !target.isDone };
-    dispatch(updateTaskData(content, id));
+    const id = event.target.closest("li").id;
+    if (
+      event.target.nodeName === "DIV" ||
+      event.target.nodeName === "LI" ||
+      event.target.nodeName === "P"
+    ) {
+      dispatch(taskActions.toggleTask(id));
+      const [target] = tasks.filter((task) => task.id === id);
+      const content = { isDone: !target.isDone };
+      dispatch(updateTaskData(content, id));
+    } else {
+      return;
+    }
   };
 
   const onDeleteHandler = (event) => {
