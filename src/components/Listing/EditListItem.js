@@ -36,10 +36,10 @@ const EditListItem = (props) => {
             ref={inputRef}
           ></input>
           <span className={classes.submit} onClick={onSubmitHandler}>
-            <img src="/submit.png" />
+            <img src="/submit.png" alt="submit-icon" />
           </span>
           <span className={classes.discard} onClick={onDiscardHandler}>
-            <img src="/discard.png" />
+            <img src="/discard.png" alt="discard-icon" />
           </span>
         </Fragment>
       ) : (
